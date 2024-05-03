@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документація до програми Аукціон</title>
+</head>
+<body>
+<h1>Документація до програми "Аукціон"</h1>
+<p>Ця програма реалізує аукціонний процес з продажу товарів учасникам за допомогою мультипотокового програмування.</p>
+
+<h2>Класи</h2>
+<h3>Auction</h3>
+<p>Цей клас відповідає за ініціалізацію та керування аукціоном.</p>
+<p><strong>Методи:</strong></p>
+<ul>
+    <li><code>startAuction()</code>: Розпочинає аукціон та виводить інформацію про його стан після завершення.</li>
+    <li><code>conductAuction(Item item)</code>: Здійснює аукціон для конкретного товару.</li>
+    <li><code>sellItem(Item item)</code>: Продає товар, знаходить переможця та зменшує баланс його акаунта.</li>
+    <li><code>findWinner(Item item)</code>: Знаходить переможця аукціону для конкретного товару.</li>
+    <li><code>main(String[] args)</code>: Точка входу в програму.</li>
+</ul>
+
+<h3>Item</h3>
+<p>Представляє товар, який продається на аукціоні.</p>
+<p><strong>Поля:</strong></p>
+<ul>
+    <li><code>name</code>: Назва товару.</li>
+    <li><code>startPrice</code>: Початкова ціна товару.</li>
+    <li><code>currentPrice</code>: Поточна ціна товару.</li>
+    <li><code>owner</code>: Власник товару.</li>
+</ul>
+<p><strong>Методи:</strong></p>
+<ul>
+    <li><code>setCurrentPrice(double currentPrice)</code>: Встановлює поточну ціну товару.</li>
+    <li><code>setOwner(Participant owner)</code>: Встановлює власника товару.</li>
+</ul>
+
+<h3>Participant</h3>
+<p>Представляє учасника аукціону.</p>
+<p><strong>Поля:</strong></p>
+<ul>
+    <li><code>balance</code>: Баланс учасника.</li>
+    <li><code>name</code>: Ім'я учасника.</li>
+</ul>
+
+<h3>Bid</h3>
+<p>Представляє ставку на аукціоні.</p>
+<p><strong>Поля:</strong></p>
+<ul>
+    <li><code>amount</code>: Сума ставки.</li>
+    <li><code>participant</code>: Учасник, що зробив ставку.</li>
+    <li><code>item</code>: Товар, на який зроблено ставку.</li>
+</ul>
+
+<h2>Використані технології</h2>
+<ul>
+    <li><strong>Java:</strong> Мова програмування, у якій реалізовано програму.</li>
+    <li><strong>Java Concurrency API:</strong> Використовується для роботи з потоками та виконання мультипотокового коду.</li>
+</ul>
+
+<h2>Параметри аукціону</h2>
+<ul>
+    <li><strong>RISK_COEFFICIENT:</strong> Коефіцієнт ризику для визначення максимальної ставки.</li>
+    <li><strong>ITEM_SOLD_TIME:</strong> Час, протягом якого триває аукціон для кожного товару.</li>
+</ul>
+
+<h2>Завершення аукціону</h2>
+<p>Після завершення аукціону виводиться інформація про продані товари, включаючи їх назви та ціни.</p>
+
+<h2>Використання</h2>
+<p>Для запуску програми виконайте метод <code>main(String[] args)</code> класу <code>Auction</code>.</p>
+
+</body>
+</html>
